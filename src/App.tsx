@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 // import IntroText from "./components/IntroText"; // Merged into Hero scroll timeline
 import Features from "./components/Features";
+import Gallery from "./components/Gallery";
 import CallToAction from "./components/CallToAction";
 import AnimatedGrid from "./components/AnimatedGrid";
 import Footer from "./components/Footer";
@@ -27,6 +28,7 @@ function App() {
         <Hero />
         {/* <IntroText /> — Content merged into Hero scroll timeline */}
         <Features />
+        <Gallery />
         <CallToAction />
       </main>
       <Footer />
