@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Agent config (not part of the app)
+.agent/
+.gemini/
+
+# Build artifacts
+dist.tar.gz
+dist.zip
+
+# Reference design files
+referensi_design/
+
+# Duplicate animated frames in src (public/ is the source of truth)
+src/animated_ara/

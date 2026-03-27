@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors — Elegant Deep Emerald (Moodboard Integrated) */
+  /* Elegant deep void for background */
+  --color-bg: #0b0914;
+  --color-surface: #100d1d;
+  --color-surface-lowest: #151126;
+  --color-surface-low: #1a1530;
+  --color-surface-container: #201a3b;
+  --color-surface-high: #241d45;
+  --color-surface-highest: #2a2160; /* Moodboard Dark Emerald */
+  --color-surface-bright: #332873;
+
+  /* Legacy aliases (used in existing components) */
+  --color-surface-1: #1a1530;
+  --color-surface-2: #201a3b;
+  --color-surface-3: #241d45;
+  --color-surface-4: #2a2160;
+
+  /* Primary — Pink */
+  --color-primary: #fe88fe;
+  --color-primary-container: #d96fd9;
+  --color-primary-dim: #b35cb3;
+
+  /* Accents */
+  --color-accent: #679dfc;
+  --color-accent-soft: #8eb7fd;
+  --color-accent-glow: rgba(103, 157, 252, 0.15);
+
+  /* Secondary — Blue */
+  --color-secondary: #679dfc;
+  --color-secondary-container: #4e78c4;
+
+  /* Tertiary — Light Pinkish White */
+  --color-tertiary: #f5e7fe;
+  --color-tertiary-container: #d7bdf0;
+
+  /* Text */
+  --color-cream: #ffffff;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #f5e7fe;
+  --color-muted: #b8aedd;
+  --color-muted-2: #8c81b5;
+
+  /* Outline */
+  --color-outline: #6d5b99;
+  --color-outline-variant: #493773;
+
+  /* Typography */
+  --font-display: "League Spartan", system-ui, sans-serif;
+  --font-headline: "League Spartan", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-label: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-high);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-2);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Ethereal blur mask for hero images */
+.ethereal-blur {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 95%);
+  transform: translateZ(0); /* Hardware acceleration */
+  will-change: transform;
+}
+
+@keyframes grid-pan {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-96px);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
